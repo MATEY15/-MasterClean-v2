@@ -1,0 +1,47 @@
+extends ../templates/main
+
+block variables
+    - var title = 'Master Clean'
+
+include ../blocks/breadcrumbs/breadcrumbs
+
+block content
+    +breadcrumbsOut()
+    include ../blocks/services-page/services-page
+    section.section.section__feedback
+        .layout
+            .feedback
+                .feedback__contact
+                    .feedback__heading
+                        .feedback__heading-title.feedback__heading-title--big Не нашли  необходимый вид уборки?
+                        .feedback__heading-desc Свяжитесь с нами удобным для вас способом
+                    .feedback__contact-wrapper
+                        .feedback__social
+                            .socials-menu
+                                +socialLink('img/social-image/telegram.svg', 'Social Icon')
+                                +socialLink('img/social-image/whatsup.svg', 'Social Icon')
+                                +socialLink('img/social-image/viber.svg', 'Social Icon')
+                        .feedback__contact-inside
+                            a(href="tel:+79774529904").feedback__contact-phone +7 977 452-99-04
+                            a(href="mailto:info@masterclean24.com").feedback__contact-email info@masterclean24.com
+                .feedback__form
+                    .feedback__heading
+                        .feedback__heading-title Форма обратной связи
+                    .feedback__form-inside
+                        form.form-default.form-default--fifty
+                            .form-default__item
+                                input(type="text" placeholder="Ваше имя").input-default
+                            .form-default__item
+                                input(type="text" placeholder="Контактный телефон").input-default.check-input
+                            .form-default__item
+                                input(type="text" placeholder="E-mail").input-default
+                            .form-default__item
+                                button.button.button--full-width.button--big-x.submit Отправить #[+mixinSvg('20px', '21px', 'icon-telegram', 'icon-telegram')]
+
+
+    //include ../blocks/calculate/calculate
+    //include ../blocks/represent/represent
+    //include ../blocks/services/services
+    //include ../blocks/faq/faq
+    //include ../blocks/testimonials/testimonials
+    //include ../blocks/news/news

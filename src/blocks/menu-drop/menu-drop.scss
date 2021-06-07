@@ -1,0 +1,73 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.menu-drop {
+  &__list {
+    margin-bottom: 20px;
+
+  }
+
+  &__link {
+    font-size: 16px;
+    line-height: 22px;
+    color: #222222;
+  }
+
+  &__link-sub {
+    position: relative;
+    display: flex;
+    &:after {
+      position: relative;
+      top: 9px;
+      width: 15px;
+      height: 8px;
+      content: '';
+      display: block;
+      margin-left: 20px;
+      background-image: url(/build/img/icons/arrow-black.svg);
+      background-repeat: no-repeat;
+      @include trn(.25s);
+    }
+    &--active {
+      &:after {
+        transform: scale(-1);
+      }
+    }
+  }
+
+  &__sub-menu {
+    padding-top: 16px;
+    display: none;
+  }
+
+  &__sub-list {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__sub-link {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #222222;
+    &:after {
+      position: relative;
+      top: 9px;
+      width: 15px;
+      height: 8px;
+      content: '';
+      display: block;
+      background-image: url(/build/img/icons/arrow-black.svg);
+      background-repeat: no-repeat;
+      transform: rotateZ(-90deg);
+      @include trn(.25s);
+    }
+  }
+
+}

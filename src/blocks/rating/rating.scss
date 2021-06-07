@@ -1,0 +1,13 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.rating {
+  &-item {
+    font-size: 0;
+    margin-right: 1px;
+  }
+  .icon-star {
+    fill: #F5C520;
+  }
+}

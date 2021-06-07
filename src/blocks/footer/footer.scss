@@ -1,0 +1,239 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.footer {
+  background: #343A40;
+  padding: 40px 0 20px;
+
+  &__wrapper {
+
+  }
+
+  &__main {
+    display: flex;
+    @media (max-width: 1100px) {
+      margin: 0 -10px;
+    }
+  }
+
+  &__item {
+    width: calc(100% / 5);
+    //padding: 0 10px;
+    @media (max-width: 1100px) {
+      width: calc(100% / 4);
+      padding: 0 10px;
+    }
+    @include table-large-screen {
+      width: 100%;
+    }
+
+    &--el1 {
+      margin-right: 80px;
+      @media (max-width: 1100px) {
+        margin-right: 60px;
+      }
+      @include table-large-screen {
+        display: none;
+      }
+    }
+
+    &--el2 {
+      max-width: 225px;
+      margin-right: 80px;
+      @media (max-width: 1100px) {
+        margin-right: 60px;
+      }
+      @include table-large-screen {
+        display: none;
+      }
+    }
+
+    &--el3 {
+      @include table-large-screen {
+        display: none;
+      }
+    }
+
+    &--el4 {
+      margin-right: 20px;
+      @media (max-width: 1100px) {
+        margin-right: 0;
+      }
+    }
+
+    &--el5 {
+      @media (max-width: 1100px) {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      @include tablet-big-screen {
+        display: none;
+      }
+    }
+  }
+
+  &__item-title {
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: 0.03em;
+    color: #707070;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #707070;
+    margin-bottom: 10px;
+    @include table-large-screen {
+      display: none;
+    }
+  }
+
+  &__menu {
+  }
+
+  &__menu-list {
+    margin-bottom: 10px;
+  }
+
+  &__menu-link {
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: 0.03em;
+    color: #FEFEFE;
+    @include trn(.2s);
+
+    &:hover {
+      opacity: .6;
+    }
+  }
+
+  &__item-title {
+  }
+
+  &__social {
+    display: flex;
+    @include table-large-screen {
+      justify-content: center;
+    }
+  }
+
+  &__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30px;
+    width: 30px;
+    height: 30px;
+    background: #F4F4F4;
+    border-radius: 50%;
+    @include trn(.15s);
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    &-image {
+      @include trn(.2s);
+    }
+
+    &:hover {
+      .footer__social-link-image {
+        filter: brightness(0) invert(1);
+      }
+    }
+
+    &--vk {
+      &:hover {
+        background: #2787f5;
+      }
+    }
+
+    &--inst {
+      &:hover {
+        background: linear-gradient(43.94deg, #EEA054 16.16%, #D64763 50.11%, #B62A99 83.68%);
+      }
+    }
+
+    &--youtube {
+      &:hover {
+        background: #f00;
+      }
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+
+    @include table-large-screen {
+      text-align: center;
+    }
+
+    a {
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 20px;
+      letter-spacing: 0.03em;
+      color: #FEFEFE;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 20px;
+      letter-spacing: 0.03em;
+      color: #FEFEFE;
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+    margin-bottom: 36px;
+  }
+
+  &__logo-image {
+  }
+
+  &__policy {
+    display: flex;
+    flex-direction: column;
+
+    &--mobile {
+      display: none;
+      @media (max-width: 1100px) {
+        display: flex;
+      }
+      a {
+        margin-bottom: 10px !important;
+      }
+    }
+
+    a {
+      display: inline-block;
+      font-size: 8px;
+      line-height: 9px;
+      letter-spacing: 0.03em;
+      text-decoration: underline;
+      color: #D0D9DE;
+      margin-bottom: 3px;
+    }
+  }
+
+  &__copy {
+    font-size: 8px;
+    line-height: 9px;
+    letter-spacing: 0.03em;
+    color: #D0D9DE;
+    text-align: center;
+    margin-top: 40px;
+    @include table-large-screen {
+      border-top: 1px solid #C4C4C4;
+      margin-top: 20px;
+      padding-top: 20px;
+    }
+  }
+
+}

@@ -1,0 +1,156 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.section__calculate {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  .layout {
+    display: flex;
+    @include table-large-screen {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.calculate {
+  background: #FEFEFE;
+  border-radius: 10px;
+  padding: 40px 56px;
+
+  @include table-large-screen {
+    padding: 40px 46px;
+  }
+
+  @include mobile-small-screen {
+    padding: 30px 20px;
+  }
+
+  &__wrapper {
+    max-width: 495px;
+    min-width: 495px;
+    @include table-large-screen {
+      min-width: auto;
+      width: 50%;
+    }
+    @include mobile-large-screen {
+      order: 3;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    margin-top: 10px;
+
+    & > label {
+      display: block;
+      font-size: 16px;
+      line-height: 23px;
+      color: #707070;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__meter {
+    display: flex;
+    align-items: flex-end;
+    height: 42px;
+    min-width: 100px;
+    border: 1px solid rgba(33, 150, 83, 0.50);
+    box-sizing: border-box;
+    padding: 8px 20px 12px;
+    border-radius: 10px;
+    @include trn(.2s);
+    &:hover {
+      box-shadow: 0 0 0 2px #219653 inset;
+      border: 1px solid #219653;
+    }
+
+    @include table-large-screen {
+      padding: 8px 10px 12px;
+    }
+    @include mobile-small-screen {
+      min-width: 60px;
+    }
+
+    &-input {
+      width: 100%;
+      font-size: 16px;
+      color: #222222;
+      border: none;
+      border-bottom: 1px solid #000000;
+    }
+
+    span {
+      display: inline-block;
+      margin-left: 2px;
+      font-size: 17px;
+      color: #222222;
+    }
+  }
+
+  &__area-fill {
+    display: flex;
+    margin-bottom: 20px;
+    .radio-item {
+      margin-right: 10px;
+    }
+  }
+
+  &__head {
+    margin-bottom: 20px;
+    @include table-large-screen {
+      width: 100%;
+      text-align: center;
+    }
+    @include mobile-large-screen {
+      order: 1;
+    }
+
+    h2 {
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 42px;
+      margin-bottom: 10px;
+      @include mobile-small-screen {
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+
+    p {
+      font-size: 24px;
+      line-height: 34px;
+      color: #219653;
+      @include mobile-small-screen {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__total {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    &-text,
+    &-sum {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 28px;
+      color: #222222;
+    }
+  }
+
+}

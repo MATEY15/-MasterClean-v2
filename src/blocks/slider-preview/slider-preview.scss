@@ -1,0 +1,64 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.slider-preview {
+  width: 100%;
+  min-width: 0;
+  display: block;
+  max-width: 720px;
+  padding-left: 20px;
+
+  @include table-large-screen {
+    width: 50%;
+  }
+
+  @include mobile-large-screen {
+    order: 2;
+    width: 100%;
+    padding-left: 0;
+    margin-bottom: 40px;
+  }
+
+  @include mobile-small-screen {
+    margin-bottom: 30px;
+  }
+
+  &__init {
+    display: block;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+    @include mobile-mini-screen {
+      margin-top: 10px;
+    }
+
+    li {
+      width: 15px;
+      height: 15px;
+      background: #B8CCE5;
+      border-radius: 50%;
+      margin: 0 6px;
+      cursor: pointer;
+      @include trn(.25s);
+
+      &.slick-active {
+        width: 30px;
+        border-radius: 19px;
+        background: #7198CB;
+      }
+
+      button {
+        display: none;
+      }
+    }
+  }
+}

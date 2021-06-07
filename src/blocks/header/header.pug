@@ -1,0 +1,85 @@
+header.header
+    include ../top-line/top-line
+    .header__main
+        .layout.header__main-wrapper
+            a(href="#").logo
+                +img('img/logo.svg', '', 'Master Clean Logo')
+            .top-line__phone.top-line__phone--mobile
+                a(href="tel:89774529904").top-line__number 8 977 452-99-04
+                span С 9-00 до 20-00
+            .main-menu__wrapper
+                a(href="#").main-menu__drop-burger
+                    | Услуги
+                    //+mixinSvg('17px', '15px', 'icon-burger', 'className')
+                    .burger-icon
+                        span.burger-icon__item
+                        span.burger-icon__item
+                        span.burger-icon__item
+                ul.main-menu
+                    +listLink('Отзывы', '#', 'main-menu__list main-menu__list--active', '')
+                    +listLink('Контакты', '#', 'main-menu__list', '')
+            a(href="#").burger-menu
+                span.burger-menu__item
+                span.burger-menu__item
+                span.burger-menu__item
+
+            .top-line__contact-wrapper.top-line__contact-wrapper--scroll
+                a(href="#call-me").button.button--small.popup Позвоните мне
+                .top-line__phone
+                    a(href="tel:89774529904").top-line__number 8 977 452-99-04
+                    span С 9-00 до 20-00
+
+    .main-menu__drop
+        .layout.main-menu__drop-wrapper
+            .main-menu__drop-item
+                h3 Частным клиентам
+                .main-menu__drop-inside
+                    .main-menu__drop-col
+                        a(href="#").main-menu__drop-category Уборка квартир и домов
+                        ul.drop-menu-inside
+                            +listLink('Поддерживающая уборка', '#', 'drop-menu-inside__list drop-menu-inside__list--active', '')
+                            +listLink('Генеральная уборка', '#', 'drop-menu-inside__list', '')
+                            +listLink('Уборка после ремонта', '#', 'drop-menu-inside__list', '')
+                            +listLink('Уборка запущенных квартир', '#', 'drop-menu-inside__list', '')
+                            +listLink('Антибактериальная уборка', '#', 'drop-menu-inside__list', '')
+                            +listLink('Влажная уборка', '#', 'drop-menu-inside__list', '')
+                            +listLink('Эко уборка', '#', 'drop-menu-inside__list', '')
+                            +listLink('Уборка коттеджа', '#', 'drop-menu-inside__list', '')
+                    .main-menu__drop-col
+                        a(href="#").main-menu__drop-category Химчистка
+                        ul.drop-menu-inside
+                            +listLink('Химчистка мягкой мебели', '#', 'drop-menu-inside__list', '')
+                            +listLink('Химчистка ковролина', '#', 'drop-menu-inside__list', '')
+                            +listLink('Химчистка ковра', '#', 'drop-menu-inside__list', '')
+                            +listLink('Химчистка штор', '#', 'drop-menu-inside__list', '')
+                        a(href="#").main-menu__drop-category Дополнительные услуги
+                        ul.drop-menu-inside
+                            +listLink('Мытье окон', '#', 'drop-menu-inside__list', '')
+                            +listLink('Глажка белья', '#', 'drop-menu-inside__list', '')
+                            +listLink('Все услуги', '#', 'drop-menu-inside__list drop-menu-inside__all-list', '')
+
+            .main-menu__drop-item
+                h3 Корпоротивным клиентам
+                .main-menu__drop-inside
+                    .main-menu__drop-col
+                        ul.drop-menu-inside
+                            +listLink('Генеральная уборка', '#', 'drop-menu-inside__list', '')
+                            +listLink('Уборка после ремонта', '#', 'drop-menu-inside__list', '')
+                            +listLink('Уборка после строительства', '#', 'drop-menu-inside__list', '')
+                            +listLink('Уборка  офисов', '#', 'drop-menu-inside__list', '')
+                            +listLink('Уборка производственных помещений', '#', 'drop-menu-inside__list', '')
+                            +listLink('Уборка торговых центров', '#', 'drop-menu-inside__list', '')
+                            +listLink('Уборка кафе и ресторанов', '#', 'drop-menu-inside__list', '')
+                            +listLink('Уборка подъездов', '#', 'drop-menu-inside__list', '')
+                            +listLink('Уборка территорий', '#', 'drop-menu-inside__list', '')
+                    .main-menu__drop-col
+                        ul.drop-menu-inside
+                            +listLink('Уборка школ', '#', 'drop-menu-inside__list', '')
+                            +listLink('Уборка спортзала и фитнес клуба', '#', 'drop-menu-inside__list', '')
+                            +listLink('Уборка на мероприятии', '#', 'drop-menu-inside__list', '')
+                            +listLink('Уборка медицинских центров', '#', 'drop-menu-inside__list', '')
+                            +listLink('Уборка автосервисов', '#', 'drop-menu-inside__list', '')
+                            +listLink('Уборка парковок и паркингов', '#', 'drop-menu-inside__list', '')
+                            +listLink('Уборка складов', '#', 'drop-menu-inside__list', '')
+                            +listLink('Уборка салонов красоты', '#', 'drop-menu-inside__list', '')
+                            +listLink('Все услуги', '#', 'drop-menu-inside__list drop-menu-inside__all-list', '')

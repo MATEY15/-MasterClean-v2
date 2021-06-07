@@ -1,0 +1,16 @@
+mixin listBreadcrumbs(name, spanTag)
+    if spanTag == true
+        li
+            span= name
+    else
+        li
+            a(href="#")= name
+
+mixin breadcrumbsOut()
+    .breadcrumbs
+        .layout
+            ul.breadcrumbs__list
+                li
+                    +mixinSvg('12px', '10px', 'icon-home', 'icon-home')
+                    a(href="#") Главная
+                +listBreadcrumbs("Услуги", true)

@@ -1,0 +1,39 @@
+mixin tabContent()
+    .services__tab-item
+        .services__image
+            +img('img/tab-image/tab-image1.svg', '', 'services image')
+        .services__content
+            .services__head
+                .services__head-title Поддерживающая уборка
+                .services__head-time.time-item
+                    +mixinSvg('15px', '15px', 'icon-time', 'icon-time')
+                    span 2 - 4 ч.
+                .services__head-total от 3 450 ₽
+            .services__text
+                p Поддержание порядка - это больше, чем просто поддержание его в чистоте. О да! Иногда груды белья превращаются в горы, детские игрушки превращают пол в минное поле для ваших ног, а скопление пыли и шерсти от животных вызывают постоянное чихание. Для занятых людей и работающих родителей найти время для уборки дома или квартиры может стать настоящей головной болью. Наша компания Masterclean24, готова вас избавить от всех страданий связанной с уборкой. Если загрязнений слишком много или в помещении давно никто не убирался, рекомендуем сначала заказать генеральную уборку.
+            .services__bottom
+                a(href="#").link Что входит в поддерживающую уборку
+                a(href="#").button.button--big.button--tab Заказать
+
+section.section.section__services
+    .layout
+        .heading
+            h3.heading__title Виды услуг
+            a(href="#").heading__link Все услуги
+        .services__wrapper
+            .tabs
+                .tabs__toggle-buttons
+                    .services__tabs-buttons
+                        .tabs__toggle-button.services__tabs-button.tabs__toggle-button--active Поддерживающая уборка
+                        .tabs__toggle-button.services__tabs-button Генеральная уборка
+                        .tabs__toggle-button.services__tabs-button После ремонта
+                        .tabs__toggle-button.services__tabs-button Химчистка
+                .tabs__toggle-items
+                    .tabs__toggle-item.tabs__toggle-item--active
+                        +tabContent()
+                    .tabs__toggle-item
+                        +tabContent()
+                    .tabs__toggle-item
+                        +tabContent()
+                    .tabs__toggle-item
+                        +tabContent()

@@ -1,0 +1,19 @@
+.top-line
+    .layout
+        .top-line__left
+            .check-city
+                +mixinSvg('14px', '20px', 'icon-location', '')
+                +select('check-city__select')
+                    option Москва
+                    option Питер
+                    option Уфа
+            .top-line__menu-wrapper
+                ul.top-menu
+                    +listLink('Частным клиентам', '#', 'top-menu__list top-menu__list--active', '')
+                    +listLink('Корпоротивным клиентам', '#', 'top-menu__list', '')
+                    +listLink('Сотрудничество', '#', 'top-menu__list', '')
+        .top-line__contact-wrapper
+            a(href="#call-me").button.button--small.popup Позвоните мне
+            .top-line__phone
+                a(href="tel:89774529904").top-line__number 8 977 452-99-04
+                span С 9-00 до 20-00

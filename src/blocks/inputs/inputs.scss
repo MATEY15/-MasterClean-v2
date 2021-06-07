@@ -1,0 +1,76 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.form-default {
+  //margin: 0 -5px;
+
+  &--fifty {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 10px 20px;
+    @include tablet-big-screen {
+      display: block;
+    }
+    .button--big-x {
+      margin-top: 0 !important;
+    }
+  }
+
+  &__item {
+    margin-bottom: 10px;
+    //padding: 0 5px;
+  }
+
+  .button--big-x {
+    margin-top: 14px;
+  }
+
+  &__col {
+    width: 50%;
+    //padding: 0 5px;
+  }
+}
+
+.check-input--error {
+  border: 1px solid #F04438 !important;
+  background: #FFF6F6 !important;
+}
+
+.input-default {
+  position: relative;
+  min-height: 50px;
+  width: 100%;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  color: #707070;
+  background: #FEFEFE;
+  border: 1px solid rgba(184, 204, 229, 0.5);
+  border-radius: 10px;
+  padding: 12px 20px;
+
+  @include placeholder() {
+    font-size: 16px;
+    line-height: 22px;
+    color: #707070;
+  }
+}
+
+textarea {
+  position: relative;
+  min-height: 90px;
+  width: 100%;
+  background: #DEE1EF;
+  border: 1px solid #D2D6E6;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #153257;
+  @include placeholder() {
+    font-size: 16px;
+    line-height: 24px;
+    color: #153257;
+  }
+}

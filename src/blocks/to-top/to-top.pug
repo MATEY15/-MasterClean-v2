@@ -1,0 +1,10 @@
+// Example
+
+a(href="#").to-top
+    +mixinSvg('50px', '50px', 'icon-to-top', '')
+    +img('img/icons/to-top.svg', 'to-top__icon', 'To top')
+
+.to-top__wrapper
+        .layout
+            a(href="#").to-top
+                +mixinSvg('50px', '50px', 'icon-to-top', 'to-top__icon')

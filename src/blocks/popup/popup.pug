@@ -1,0 +1,28 @@
+mixin popupWrapper(id)
+    .popup-default.mfp-zoom-in.mfp-with-anim.mfp-hide(id=id)
+        block
+
+mixin callMe()
+    +popupWrapper('call-me')
+        form.form-default
+            .form-default__item
+                input(type="text" placeholder="Ваше имя").input-default
+            .form-default__item
+                input(type="text" placeholder="Номер телефона").input-default.check-input
+            .form-default__item
+                //button.button.button--full-width.button--big-x Позвоните мне
+                button.button.button--full-width.button--big-x.submit Позвоните мне
+        .socials-menu.socials-menu--border-top
+            +socialLink('img/social-image/telegram.svg', 'Social Icon')
+            +socialLink('img/social-image/whatsup.svg', 'Social Icon')
+            +socialLink('img/social-image/viber.svg', 'Social Icon')
+
+mixin successful()
+    +popupWrapper('successful')
+        .successful__wrapper
+            .form-default__item
+                +img('img/icons/successful.svg', '', 'Successful')
+            .form-default__item
+                p Ваша заявка принята!
+            .form-default__item
+                p Оператор свяжется с вами в #[br] течении 2-х минут

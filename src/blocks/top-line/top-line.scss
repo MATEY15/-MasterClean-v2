@@ -1,0 +1,141 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.top-line {
+  border-bottom: 1px solid rgba(33, 150, 83, 0.25);
+  height: 64px;
+  display: flex;
+  align-items: center;
+  @include trn(.2s);
+
+  @include table-large-screen {
+    display: none;
+  }
+
+  .layout {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__contact-wrapper {
+    display: flex;
+    align-items: center;
+
+    &--scroll {
+      margin-left: auto;
+      opacity: 0;
+      visibility: hidden;
+      @include tt(0, -20px);
+
+      @include table-large-screen {
+        display: none !important;
+      }
+    }
+  }
+
+  .button--small {
+    @media (max-width: 1100px) {
+      display: none;
+    }
+  }
+
+  &__phone {
+    margin-left: 50px;
+    @include laptop-small-screen {
+      margin-left: 26px;
+    }
+    &--mobile {
+      display: none;
+      text-align: center;
+      @include table-large-screen {
+        display: block;
+        margin-left: 0;
+      }
+    }
+    span {
+      font-size: 13px;
+      line-height: 15px;
+    }
+  }
+
+  &__number {
+    display: block;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    color: #222222;
+    @include table-large-screen {
+      font-size: 18px;
+      line-height: 26px;
+    }
+    @include mobile-mini-screen {
+      font-size: 15px;
+      line-height: 21px;
+    }
+  }
+}
+
+// Top menu
+
+.top-menu {
+  display: flex;
+
+  &__list {
+    position: relative;
+
+
+    &:before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      width: 100%;
+      content: '';
+      background: #219653;
+      border-radius: 5px 5px 0 0;
+      @include trn(.25s);
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    a {
+      display: inline-block;
+      font-size: 14px;
+      line-height: 24px;
+      color: #222222;
+      text-decoration: none;
+      @include trn(.2s);
+      padding: 19px 0;
+    }
+
+    &:hover a {
+      color: #219653;
+    }
+
+    &--active {
+      &:before {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      a {
+        font-size: 14px;
+      }
+
+      &:hover a {
+        color: #222222;
+      }
+    }
+
+  }
+}

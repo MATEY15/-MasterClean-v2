@@ -1,0 +1,38 @@
+section.section.section-news
+    .layout
+        .heading
+            h3.heading__title Новости
+            a(href="#").heading__link Все новости
+        .news__wrapper
+            .news__col
+                a(href="#").news__item
+                    .news__image-wrapper
+                        +img('img/news/news1.jpg', 'news__image', 'Новости')
+                    .news__decs
+                        .news__title «Мастерклин 24» проводит благотворительную помощь всем нуждающимся
+                        .news__date 11 февраля 2021,  08:15
+
+            .news__col
+                a(href="#").news__item
+                    .news__image-wrapper
+                        +img('img/news/news2.jpg', 'news__image', 'Новости')
+                    .news__decs
+                        .news__title Европейские клинеры выбрали лучшую
+                        .news__date 30 ноября 2020, 12:00
+
+            .news__col
+                a(href="#").news__item
+                    .news__image-wrapper
+                        +img('img/news/news3.jpg', 'news__image', 'Новости')
+                    .news__decs
+                        .news__title Выставка CLEANEXPO KRASNODAR 2020
+                        .news__date 26 января 2020 16:52
+
+            .news__col
+                a(href="http://www.youtube.com/watch?v=0O2aH4XLbto").news__item.popup-youtube
+                    .news__image-wrapper
+                        .news__icon--video
+                        +img('img/news/news4.jpg', 'news__image', 'Новости')
+                    .news__decs
+                        .news__title Инновационный робот-поломойка
+                        .news__date 26 января 2020 16:52

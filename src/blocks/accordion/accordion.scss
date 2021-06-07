@@ -1,0 +1,68 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.accordion {
+  &__item {
+    border-bottom: 1px solid #C4C4C4;
+    &--active {
+      .accordion__title {
+        color: #219653;
+        .icon-arrow {
+          fill: #219653;
+          transform: scale(-1);
+        }
+      }
+    }
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    @include trn(.25s);
+    padding: 20px 0 32px;
+    cursor: pointer;
+    @include mobile-small-screen {
+      font-size: 18px;
+      line-height: 20px;
+    }
+    &:hover {
+      color: #219653;
+    }
+    .icon-arrow {
+      width: 25px;
+      height: 15px;
+      @include trn(.25s);
+      @include mobile-large-screen {
+        min-width: 18px;
+        width: 18px;
+        margin-left: 10px;
+      }
+    }
+  }
+  &__description {
+    display: none;
+    font-size: 18px;
+    line-height: 26px;
+    color: #222222;
+    padding-bottom: 20px;
+    padding-left: 70px;
+    @include mobile-large-screen {
+      font-size: 15px;
+      line-height: 21px;
+      padding-left: 30px;
+    }
+    p {
+      max-width: 927px;
+    }
+    a {
+      color: #219653;
+    }
+    u {
+      font-weight: bold;
+    }
+  }
+}

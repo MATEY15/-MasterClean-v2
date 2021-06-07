@@ -1,0 +1,56 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.heading {
+  text-align: center;
+  color: #353132;
+  &__title {
+    @include offset(font-size, 26px, 30px, 768px, 1024px);
+    @include offset(line-height, 36px, 42px, 768px, 1024px);
+    text-align: center;
+    margin-bottom: 10px;
+
+    &--big {
+      font-size: 32px;
+      line-height: 42px;
+      @include mobile-mini-screen() {
+        @include offset(font-size, 20px, 24px, 320px, 480px);
+        @include offset(line-height, 26px, 32px, 320px, 480px);
+      }
+    }
+    
+    &--left {
+      text-align: left;
+    }
+  }
+  &__description {
+    @include offset(font-size, 15px, 18px, 768px, 1024px);
+    @include offset(line-height, 21px, 25px, 768px, 1024px);
+    color: #222222;
+  }
+
+  &__link {
+    position: relative;
+    @include offset(font-size, 15px, 18px, 768px, 1024px);
+    @include offset(line-height, 21px, 25px, 768px, 1024px);
+    color: #219653;
+    @include trn(.2s);
+    &:before {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: 1px;
+      background: #219653;
+      @include trn(.2s);
+    }
+    &:hover {
+      color: #36D379;
+      &:before {
+        background: #36D379;
+      }
+    }
+  }
+}

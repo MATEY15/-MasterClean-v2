@@ -1,0 +1,134 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --white-color: #ffffff;
+  --black-color: #222222;
+
+  --green-color: #219653;
+  --blue-color: #7198CB;
+}
+
+::selection {
+  background: #ccc;
+  color: #4f4c66;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  //transition: all 200ms ease-in;
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: none;
+  margin: 0;
+  min-width: 320px;
+  color: var(--black-color);
+  background: var(--white-color);
+  background: #F6F8F9;
+  padding-top: 140px;
+
+  @include table-large-screen {
+    padding-top: 80px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.all-list {
+  position: relative;
+  &:after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 1px;
+    display: block;
+    background: #222;
+  }
+}
+
+input {
+  outline: none;
+}
+
+.time-item {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #7198CB;
+  .icon-time {
+    margin-right: 10px;
+  }
+}
+
+.link {
+  position: relative;
+  font-size: 18px;
+  line-height: 20px;
+  color: #219653;
+  @include trn(.25s);
+  @include table-large-screen {
+    text-decoration: underline;
+  }
+  &:before {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #219653;
+    @include trn(.25s);
+    @include table-large-screen {
+      display: none;
+    }
+  }
+  &:hover {
+    color: #36D379;
+    &:before {
+      background: #36D379;
+    }
+  }
+}
+
+.height-100 {
+  @include offset(height, 60px, 100px, 480px, 991px);
+}
+
+.successful {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+}
+

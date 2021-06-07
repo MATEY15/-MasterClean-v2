@@ -1,0 +1,87 @@
+section.section.section__calculate
+    .layout
+        .calculate__wrapper
+            .calculate__head(data-da=".section__calculate .layout,991,0")
+                h2 Уборка квартир и домов в Москве
+                p Гарантия чистоты в вашем доме!
+            .calculate
+                .calculate__title Рассчитать стоимость
+                form.calculate__form
+                    .calculate__item
+                        label Вид уборки
+                        +select('sort-select')
+                            option Генеральная уборка
+                            option Генеральная уборка 1
+                            option Генеральная уборка 2
+                            option Генеральная уборка 3
+                    .calculate__item
+                        label Площадь, м²
+
+                        .calculate__area-fill
+                            label.radio-item
+                                input.radio-item__input(type="radio" name="radio" checked="checked" required="")
+                                .radio-item__status
+                                    p 40
+                            label.radio-item
+                                input.radio-item__input(type="radio" name="radio" checked="checked" required="")
+                                .radio-item__status
+                                    p 50
+                            label.radio-item
+                                input.radio-item__input(type="radio" name="radio" checked="checked" required="")
+                                .radio-item__status
+                                    p 60
+                            label.radio-item.radio-item--mobile-hide
+                                input.radio-item__input(type="radio" name="radio" checked="checked" required="")
+                                .radio-item__status
+                                    p 70
+                            .calculate__meter
+                                input(type="text").calculate__meter-input
+                                span м²
+
+                    .calculate__item
+                        .calculate__total
+                            .calculate__total-text Итого
+                            .calculate__total-time.time-item
+                                +mixinSvg('15px', '15px', 'icon-time', 'icon-time')
+                                span 2 - 4 ч.
+                            .calculate__total-sum от 3 450 ₽
+
+                    .calculate__item
+                        button.button.button--full-width.button--big Заказать
+
+                    //.calculate__item
+                    //    label Название custom
+                    //    .calculate__area-fill
+                    //        label.checkbox-item
+                    //            input.checkbox-item__input(type="checkbox" required="")
+                    //            .checkbox-item__status
+                    //                p 40
+                    //        label.checkbox-item
+                    //            input.checkbox-item__input(type="checkbox" checked="checked" required="")
+                    //            .checkbox-item__status
+                    //                p 50
+                    //        label.checkbox-item
+                    //            input.checkbox-item__input(type="checkbox" required="")
+                    //            .checkbox-item__status
+                    //                p 60
+                    //        label.checkbox-item
+                    //            input.checkbox-item__input(type="checkbox" required="")
+                    //            .checkbox-item__status
+                    //                p 70
+                    //        .calculate__meter
+                    //            input(type="text").calculate__meter-input
+                    //            span м²
+                    //
+                    //.calculate__item
+                    //    label.checkbox-button
+                    //        input.checkbox-button__input(type="checkbox" checked="checked" required="")
+                    //        .checkbox-button__text
+                    //            .checkbox-button__status
+                    //            p Checkbox 1
+                    //    label.radio-button
+                    //        input.radio-button__input(type="radio" name="radio" checked="checked" required="")
+                    //        .radio-button__text
+                    //            .radio-button__status
+                    //            p Radio 1
+
+        include ../slider-preview/slider-preview

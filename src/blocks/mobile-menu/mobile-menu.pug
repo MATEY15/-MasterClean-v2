@@ -1,0 +1,98 @@
+.mobile-menu
+    .mobile-menu__head
+        .check-city
+            +mixinSvg('14px', '20px', 'icon-location', '')
+            +select('check-city__select')
+                option Москва
+                option Питер
+                option Уфа
+        .mobile-menu__close
+            +mixinSvg('28px', '28px', 'icon-close', 'icon-close')
+
+    .mobile-menu__button
+        a(href="#").button.button--large Частным клиентам
+        a(href="#").button.button--large.button--border Корпоротивным клиентам
+    .mobile-menu__menu-drop
+        ul.menu-drop
+            li.menu-drop__list
+                a(href="#").menu-drop__link.menu-drop__link-sub Услуги
+                ul.menu-drop__sub-menu
+                    li.menu-drop__sub-list
+                        a(href="#").menu-drop__sub-link Физичиским лицам
+                    li.menu-drop__sub-list
+                        a(href="#").menu-drop__sub-link Юридическим лицам
+            li.menu-drop__list
+                a(href="#").menu-drop__link Отзывы
+            li.menu-drop__list
+                a(href="#").menu-drop__link Контакты
+            li.menu-drop__list
+                a(href="#").menu-drop__link Сотрудничество
+            li.menu-drop__list
+                a(href="#").menu-drop__link Полезное
+
+    .mobile-menu__page-wrapper
+        .mobile-menu__page
+            .mobile-menu__head
+                .mobile-menu__page-back Назад
+                .mobile-menu__page-close
+                    +mixinSvg('28px', '28px', 'icon-close', 'icon-close')
+            .mobile-menu__page-body
+                .mobile-menu__category
+                    a(href="#") 1 Уборка квартир и домов
+                    ul.mobile-menu__category-menu
+                        li.active
+                            a(href="#") Поддерживающая уборка
+                        li
+                            a(href="#") Уборка квартир и домов
+                        li
+                            a(href="#") Генеральная уборка
+                        li
+                            a(href="#") Уборка запущенных квартир
+                        li
+                            a(href="#") Уборка после ремонта
+                .mobile-menu__category
+                    a(href="#") Химчистка
+                    ul.mobile-menu__category-menu
+                        li
+                            a(href="#") Мягкая мебель
+                        li
+                            a(href="#") Ковролин
+                        li
+                            a(href="#") Ковер
+                        li
+                            a(href="#") Шторы
+                        li
+                            a(href="#").all-list Все услуги
+
+        .mobile-menu__page
+            .mobile-menu__head
+                .mobile-menu__page-back Назад
+                .mobile-menu__page-close
+                    +mixinSvg('28px', '28px', 'icon-close', 'icon-close')
+            .mobile-menu__page-body
+                .mobile-menu__category
+                    a(href="#") 2 Уборка квартир и домов
+                    ul.mobile-menu__category-menu
+                        li.active
+                            a(href="#") Поддерживающая уборка
+                        li
+                            a(href="#") Уборка квартир и домов
+                        li
+                            a(href="#") Генеральная уборка
+                        li
+                            a(href="#") Уборка запущенных квартир
+                        li
+                            a(href="#") Уборка после ремонта
+                .mobile-menu__category
+                    a(href="#") Химчистка
+                    ul.mobile-menu__category-menu
+                        li
+                            a(href="#") Мягкая мебель
+                        li
+                            a(href="#") Ковролин
+                        li
+                            a(href="#") Ковер
+                        li
+                            a(href="#") Шторы
+                        li
+                            a(href="#").all-list Все услуги
